@@ -51,11 +51,17 @@ def client_new(client):
         client.togroup('m')
     if 'Громкость' in str(client.name):
         client.togroup('m')
-    if 'btop' in str(client.name):
+    if 'nvtop' in str(client.name):
         client.togroup('m')
     if 'Telegram' in str(client.name):
         client.togroup('t')
     if 'Obsidian' in str(client.name):
+        client.togroup('c')
+    if 'vis' == str(client.name):
+        client.togroup('m')
+    if 'btop' == str(client.name):
+        client.togroup('m')
+    if 'nvim' == str(client.name):
         client.togroup('c')
 
 @hook.subscribe.client_new

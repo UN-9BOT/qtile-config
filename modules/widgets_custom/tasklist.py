@@ -259,7 +259,7 @@ class TaskList(base._Widget, base.PaddingMixin, base.MarginMixin):
         width_total = self.width - 2 * self.margin_x - (window_count - 1) * self.spacing
         width_avg = width_total / window_count
 
-        names = [self.get_taskname(w) for w in windows]
+        names = [self.get_taskname(w)[:15] for w in windows]
 
         if self.icon_size == 0:
             icons = len(windows) * [None]
