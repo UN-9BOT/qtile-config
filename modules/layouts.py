@@ -40,7 +40,12 @@ layouts = [
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
-    # layout.Matrix(),
+    layout.Matrix(
+        border_width=bw,
+        border_focus=border_focus,
+        border_normal=border_normal,
+        margin=margin
+        ),
     # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),

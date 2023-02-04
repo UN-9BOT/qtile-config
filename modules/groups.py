@@ -1,10 +1,21 @@
 from libqtile.config import Key, Group, Match
 from libqtile.command import lazy
+from libqtile import layout
 from .keys import keys, mod
 
-groups = [Group(i) for i in ['1', '2', '3', '4', 'w', 'c', 't', '0', 'm']]
+# groups = [Group(i) for i in ['1', '2', '3', '4', 'w', 'c', 't', '0', 'm']]
 # groups = [Group("1"), Group("2"), Group("3", matches=[Match(wm_class="Mozilla Firefox")])]
-
+groups = [
+    Group('1'),
+    Group('2'),
+    Group('3'),
+    Group('4'),
+    Group('w'),
+    Group('c'),
+    Group('t'),
+    Group('0'),
+    Group('m', layout = "matrix"),
+    ]
 
 # def _go_to_group(name: str):
 #     """

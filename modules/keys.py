@@ -17,8 +17,8 @@ keys = [
     Key([mod], "b", lazy.to_screen(1)),
 
     # Switch keyboard layouts
-    Key([], "Scroll_Lock", lazy.spawn("setxkbmap -layout us,ru"), desc="Change to US layout"),
-    Key(["shift"], "Scroll_Lock", lazy.spawn("setxkbmap -layout ru,us"), desc="Change to RU layout"),
+    Key([], "Pause", lazy.spawn("setxkbmap -layout us,ru"), desc="Change to US layout"),
+    Key(["shift"], "Pause", lazy.spawn("setxkbmap -layout ru,us"), desc="Change to RU layout"),
     # Key([mod], "F12", lazy.spawn("setxkbmap ru"), desc="Change to RU layout"),
     # Key([mod], "F11", lazy.spawn("setxkbmap us"), desc="Change to US layout"),
 
