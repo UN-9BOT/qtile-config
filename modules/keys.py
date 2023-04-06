@@ -2,7 +2,7 @@ from libqtile.lazy import lazy
 from libqtile.config import Key
 
 mod = "mod4"
-terminal = "terminology"
+terminal = "/opt/tabby/tabby"
 
 keys = [
     # custom apps
@@ -10,7 +10,6 @@ keys = [
     Key([], "Print", lazy.spawn("flameshot gui")),
     Key(["control", "mod1"], "v", lazy.spawn("diodon")),
     Key([mod], "F1", lazy.spawn("slock")),
-    
 
     # Switch screens
     Key([mod], "v", lazy.to_screen(0)),
@@ -48,9 +47,9 @@ keys = [
         "j",
         lazy.layout.shuffle_down(),
         desc="Move window down"),
-    Key([mod, "shift"], 
-        "k", 
-        lazy.layout.shuffle_up(), 
+    Key([mod, "shift"],
+        "k",
+        lazy.layout.shuffle_up(),
         desc="Move window up"),
 
     # Grow windows. If current window is on the edge of screen and direction
@@ -67,8 +66,8 @@ keys = [
         "j",
         lazy.layout.shrink(),
         desc="Grow window down"),
-    Key([mod, "control"], 
-        "k", 
+    Key([mod, "control"],
+        "k",
         lazy.layout.grow(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     Key([mod, "shift"], "space", lazy.layout.flip(), desc="Flip main window on other side"),

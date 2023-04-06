@@ -7,7 +7,7 @@ xrandr --output eDP --mode 1920x1080 --pos 1920x0
 
 ## set US key
 setxkbmap -layout us,ru
-feh --bg-scale /home/un9bot/.config/qtile/walls/flatppuccin_4k_macchiato.png   # wallaper
+feh --bg-scale /home/un9bot/.config/qtile/walls/skull1.jpg   # wallaper
 picom &  # --experimental-backends --vsync should prevent screen tearing on most setups if needed
 
 ## Low battery notifier
@@ -18,11 +18,12 @@ picom &  # --experimental-backends --vsync should prevent screen tearing on most
 
 ## start apps
 input-remapper-control --command stop-all && input-remapper-control --command autoload &
-subl & 
+# subl & 
 /usr/lib/brave-bin/brave --profile-directory=Default --app-id=lhkhbcnmnacfgkhmincmdinafnopbgln & 
 terminology -T=btop -e btop & 
 telegram-desktop & 
 diodon & 
+tabby &
 # pycharm & 
 yandex-disk-indicator & 
 brave & 
