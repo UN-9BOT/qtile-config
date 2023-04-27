@@ -13,6 +13,7 @@ groups = [
     Group('w'),
     Group('c'),
     Group('t'),
+    Group('o'),
     Group('0'),
     Group('m', layout = "matrix"),
     ]
@@ -57,7 +58,7 @@ for i in groups:
         Key([mod], "Left", lazy.screen.prev_group(),
             desc="Switch to previous group"),
 
-        # mod1 + shift + letter of group = switch to & move focused window to group
+        # mod1 + shift + letter of group = switch to & move focused window
         Key([mod, "shift"],
             i.name,
             lazy.window.togroup(i.name, switch_group=True),

@@ -1,8 +1,8 @@
 from libqtile import hook, qtile
-from libqtile.command import lazy
 import subprocess
 import os
 import re
+
 
 def is_running(process):
     s = subprocess.Popen(["ps", "axw"], stdout=subprocess.PIPE)
@@ -17,13 +17,9 @@ def execute_once(process):
         return subprocess.Popen(process.split())
 
 
-
-
-
 @hook.subscribe.startup
 def startup():
     execute_once("nm-applet")
-
 
 
 @hook.subscribe.startup_once
@@ -31,13 +27,14 @@ def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
 
-    
+
 @hook.subscribe.startup_once
 def _():
     # Set initial groups
     if len(qtile.screens) > 1:
         qtile.groups_map['w'].cmd_toscreen(0, toggle=False)
         qtile.groups_map['m'].cmd_toscreen(1, toggle=False)
+
 
 @hook.subscribe.client_new
 def client_new(client):
@@ -54,9 +51,10 @@ def client_new(client):
     if 'Telegram' in str(client.name):
         client.togroup('t')
     if 'Obsidian' in str(client.name):
-        client.togroup('c')
+        client.togroup('o')
     if 'btop' == str(client.name):
         client.togroup('m')
+
 
 @hook.subscribe.client_new
 def dialogs(window):
