@@ -32,8 +32,11 @@ def autostart():
 def _():
     # Set initial groups
     if len(qtile.screens) > 1:
-        qtile.groups_map['w'].cmd_toscreen(0, toggle=False)
+        qtile.groups_map['c'].cmd_toscreen(0, toggle=False)
         qtile.groups_map['m'].cmd_toscreen(1, toggle=False)
+
+    if len(qtile.screens) == 1:
+        qtile.groups_map['c'].cmd_toscreen(0, toggle=False)
 
 
 @hook.subscribe.client_new

@@ -19,18 +19,18 @@ picom &  # --experimental-backends --vsync should prevent screen tearing on most
 ## start apps
 input-remapper-control --command stop-all && input-remapper-control --command autoload &
 # subl & 
-/usr/lib/brave-bin/brave --profile-directory=Default --app-id=lhkhbcnmnacfgkhmincmdinafnopbgln & 
+# /usr/lib/brave-bin/brave --profile-directory=Default --app-id=lhkhbcnmnacfgkhmincmdinafnopbgln & 
 terminology -T=btop -e btop & 
 telegram-desktop & 
 diodon & 
-tabby &
+/opt/tabby/tabby&
 # pycharm & 
 yandex-disk-indicator & 
 brave & 
 kdeconnect-cli -n un9droid --pair & 
 kdeconnect-indicator & 
 crow & 
-# obsidian & 
+obsidian & 
 udiskie -a  -n -t & 
 pavucontrol & 
 
