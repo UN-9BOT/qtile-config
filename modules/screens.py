@@ -59,7 +59,7 @@ screens = [
                  fontsize=28,
                  foreground='#2f343f',
              ),
-             widget.KeyboardLayout(configured_keyboards=["us", "ru"]),
+             # widget.KeyboardLayout(configured_keyboards=["us", "ru"]),
              widget.TextBox(
                  text='',
                  padding=0,
@@ -142,7 +142,7 @@ screens = [
                  fontsize=28,
                  foreground='#2f343f',
              ),
-             widget.KeyboardLayout(configured_keyboards=["us", "ru"]),
+             # widget.KeyboardLayout(configured_keyboards=["us", "ru"]),
              widget.TextBox(
                  text='',
                  padding=0,

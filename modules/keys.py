@@ -2,11 +2,11 @@ from libqtile.lazy import lazy
 from libqtile.config import Key
 
 mod = "mod4"
-terminal = "/opt/tabby/tabby"
+terminal = "alacritty"
 
 keys = [
     # custom apps
-    Key([mod], "e", lazy.spawn("thunar")),
+    Key([mod], "e", lazy.spawn("alacritty -e ranger")),
     Key([], "Print", lazy.spawn("flameshot gui")),
     Key(["control", "mod1"], "v", lazy.spawn("diodon")),
     Key([mod], "F1", lazy.spawn("slock")),
@@ -14,14 +14,22 @@ keys = [
     Key([mod], "v", lazy.to_screen(0)),
     Key([mod], "b", lazy.to_screen(1)),
     # Switch keyboard layouts
-    Key([], "Pause", lazy.spawn("setxkbmap -layout us,ru"),
+    Key([], "Pause", lazy.spawn("xkb-switch -s us"),
         desc="Change to US layout"),
     Key(
         ["shift"],
         "Pause",
-        lazy.spawn("setxkbmap -layout ru,us"),
+        lazy.spawn("xkb-switch -s ru"),
         desc="Change to RU layout",
     ),
+    # Key([], "Pause", lazy.spawn("setxkbmap -layout us,ru"),
+    #     desc="Change to US layout"),
+    # Key(
+    #     ["shift"],
+    #     "Pause",
+    #     lazy.spawn("setxkbmap -layout ru,us"),
+    #     desc="Change to RU layout",
+    # ),
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),

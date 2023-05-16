@@ -7,7 +7,7 @@ xrandr --output eDP --mode 1920x1080 --pos 1920x0
 
 ## set US key
 setxkbmap -layout us,ru
-feh --bg-scale /home/un9bot/.config/qtile/walls/skull1.jpg   # wallaper
+feh --bg-scale /home/un9bot/.config/qtile/walls/night-city.jpg # wallaper
 picom &  # --experimental-backends --vsync should prevent screen tearing on most setups if needed
 
 ## Low battery notifier
@@ -23,12 +23,13 @@ input-remapper-control --command stop-all && input-remapper-control --command au
 terminology -T=btop -e btop & 
 telegram-desktop & 
 diodon & 
-/opt/tabby/tabby&
+alacritty&
+rambox &
 # pycharm & 
 yandex-disk-indicator & 
 brave & 
-kdeconnect-cli -n un9droid --pair & 
-kdeconnect-indicator & 
+# kdeconnect-cli -n un9droid --pair & 
+# kdeconnect-indicator & 
 crow & 
 obsidian & 
 udiskie -a  -n -t & 

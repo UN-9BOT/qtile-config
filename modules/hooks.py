@@ -51,7 +51,7 @@ def client_new(client):
         client.togroup('m')
     if 'Volume Control' in str(client.name):
         client.togroup('m')
-    if 'Telegram' in str(client.name):
+    if 'Rambox' in str(client.name):
         client.togroup('t')
     if 'Obsidian' in str(client.name):
         client.togroup('o')
