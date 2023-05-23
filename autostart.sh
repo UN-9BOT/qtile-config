@@ -7,7 +7,7 @@ xrandr --output eDP --mode 1920x1080 --pos 1920x0
 
 ## set US key
 setxkbmap -layout us,ru
-feh --bg-scale /home/un9bot/.config/qtile/walls/night-city.jpg # wallaper
+feh --bg-scale /home/un9bot/.config/qtile/walls/angel-1.jpg # wallscloud.net
 picom &  # --experimental-backends --vsync should prevent screen tearing on most setups if needed
 
 ## Low battery notifier
